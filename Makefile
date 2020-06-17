@@ -6,7 +6,7 @@ OBJ = $(SRC:.c=.o)
 
 all: $(BIN)
 
-debug: CCFLAGS += -DDEBUG
+debug: CFLAGS += -DDEBUG
 debug: $(BIN)
 
 %.o: %.c

@@ -82,6 +82,7 @@ struct tcp_addr
 int parse_addr(struct tcp_addr *addr, char *str)
 {
     char *str_copy = strdup(str);
+    char *str_copy_orig = str_copy;
     char *tmp;
     tmp = strsep(&str_copy, ":");
     // Don't need to save the 'tcp' string.
@@ -89,7 +90,7 @@ int parse_addr(struct tcp_addr *addr, char *str)
     addr->addr = strdup(tmp);
     tmp = strsep(&str_copy, ":");
     addr->port = strdup(tmp);
-    free(str_copy);
+    free(str_copy_orig);
 
     if ((addr->addr == NULL) || (addr->port == NULL))
     {
