@@ -8,6 +8,8 @@ This tool rewrites the video stream produced by inexpensive wifi borescope/boros
 
 This builds on the work of [Nathan Henrie](https://n8henrie.com/) and [Matthew Plough](https://mplough.github.io/), with further work into reverse engineering the firmware of these inexpensive cameras and decoding the stream format by myself.
 
+A writup on my reverse engineering of the firmware can be found [here](https://mkarr.github.io/20200616_boroscope).
+
 ### Stream format
 
 These cameras provide an "augmented" MJPEG stream over port 7060 at IP address 192.168.10.123 when connected to them via wifi. The contents of this augmentation are:
